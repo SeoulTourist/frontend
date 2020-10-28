@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    padding: 20px 0px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0px 16px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.navbar-menu>a {
+    padding: 16px;
+}
+
+.title-bg {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 36px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.content {
+    padding: 0px 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.searchPanel {
+    background-color: #f7f7f7;
+    padding: 24px;
+    margin: 36px 0px;
+    /*border: 1px solid lightgray;*/
+    border-radius: 10px;
+}
+
+.search-bar {
+    display: flex;
+    margin: 0 auto;
+    height: 38px;
+    width: 800px;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+
+.fa-search {
+    font-size: 24px;
+    vertical-align: middle;
+    padding: 0 10px;
+    color: gray;
+}
+
+.search-input {
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+    height: 38px;
+}
+
+.category {
+    display: flex;
+    margin: 36px 0px;
+}
+
+.search-title {
+    font-size: 16px;
+    padding-right: 16px;
+}
+
+.category-element {
+    background-color: white;
+    padding: 10px 16px;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.toggleMap {
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+.location-toggleBtn {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.fa-angle-down {
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.location-map {
+    padding-top: 24px;
+    text-align: center;
+}
+
+.article-element {
+    list-style: none;
+    padding: 0;
+}
+
+.article-element>li {
+    width: 330px;
+    border: 1px solid gray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.article-element-thumb {
+    height: 210px;
+    width: 330px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.article-element-info {
+    width: 330px;
+    text-align: center;
+}
+
+.article-element-info>p {
+    margin-top: 10px;
+    color: black;
+}

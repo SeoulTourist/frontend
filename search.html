@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="search_style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-menu">
+                <a href="webTeam-1.html">Logo</a>
+            </div>
+            <div class="navbar-menu">
+                <a href="#">관광지</a>
+                <a href="#">문화행사</a>
+            </div>
+            <div class="navbar-menu">
+                <a href="#">Login</a>
+                <a href="#">My Page</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="title-bg" style="background-image: url('./images/title.jpg');">
+            <span class="title">관광지</span>
+        </div>
+    </section>
+    <section class="content">
+        <div class="searchPanel">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input id="sights-search" type="text" name="sights-search" placeholder="키워드 검색" class="search-input">
+            </div>
+            <div class="category">
+                <span class="search-title"><strong>분류</strong></span>
+                <div>
+                    <a href="#" class="category-element">고궁</a>
+                    <a href="#" class="category-element">공원</a>
+                    <a href="#" class="category-element">박물관</a>
+                </div>
+            </div>
+            <div class="location">
+                <span class="search-title"><strong>지역</strong></span>
+                <button type="button" class="location-toggleBtn">
+                    <span>지도에서 선택</span>
+                    <i class="fas fa-angle-down"></i>
+                </button>
+                <div class="location-map">
+                    <img src="./images/map.png" alt="map">
+                </div>
+            </div>
+        </div>
+        <div class="article-list">
+            <ul class="article-element">
+                <li>
+                    <a href="project.html">
+                        <img src="./images/gangnam.jpg" alt="" class="article-element-thumb">
+                        <div class="article-element-info">
+                            <p><strong>강남</strong></p>
+                            <p>서울 용산구 남산공원길 105</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
