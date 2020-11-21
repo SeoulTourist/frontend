@@ -4,33 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/search_style.css">
-    <title>Document</title>
+    <title>SEOUL TRAVEL</title>
 </head>
 
 <body>
     <div class="container">
         <header class="header">
             <nav class="row">
-                <div class="col-2"><a href="webTeam-1.html">
+                <div class="col-2"><a href="main.html">
                         <img src="./images/ssss.png" alt="Logo Image" class="header-image">
                     </a>
                 </div>
 
-                <div class="col-2"> <a href="search.html">
+                <div class="col-2">
+                    <a href="search.html">
                         <h3 class="name-title">지역</h3>
                         <h4 class="name-title">Area</h4>
                     </a>
                 </div>
                 <div class="col-2">
-                    <h3 class="name-title">문화 행사</h3>
-                    <h4 class="name-title">Events</h4>
+                    <a href="events.html">
+                        <h3 class="name-title">문화 행사</h3>
+                        <h4 class="name-title">Events</h4>
+                    </a>
                 </div>
                 <div class="col-2">
-                    <h3 class="name-title">관광지</h3>
-                    <h4 class="name-title">Attraction</h4>
+                    <a href="attraction.html">
+                        <h3 class="name-title">관광지</h3>
+                        <h4 class="name-title">Attraction</h4>
+                    </a>
                 </div>
                 <div class="col-2">
                     <h3 class="name-title">마이페이지</h3>
@@ -45,11 +55,15 @@
 
         <hr>
 
-        <section>
-            <div class="title-bg" style="background-image: url('./images/events-title.jpg');">
-                <span class="title">문화행사</span>
+        <div class="row">
+            <div class="main-image col-12 center-text">
+                <img src="./images/events-title.jpg" sizes="100vw" alt="main image">
+                <div class="main-overlay center-text">
+                    <p class="main-overlay-text">문화행사</p>
+                </div>
             </div>
-        </section>
+        </div>
+
         <section class="content">
             <div class="searchPanel">
                 <div class="search-bar">
@@ -70,46 +84,7 @@
             </div>
             <div class="article-list">
                 <ul class="article-element">
-                    <li>
-                        <a href="#">
-                            <img src="./images/festival.jpg" alt="" class="article-element-thumb">
-                            <div class="article-element-info">
-                                <h4><strong>2020 종로한복축제</strong></h4>
-                                <p>2020-10-09 ~ 2020-10-31</p>
-                                <p>서울시 종로구 일대</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./images/festival.jpg" alt="" class="article-element-thumb">
-                            <div class="article-element-info">
-                                <h4><strong>2020 종로한복축제</strong></h4>
-                                <p>2020-10-09 ~ 2020-10-31</p>
-                                <p>서울시 종로구 일대</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./images/festival.jpg" alt="" class="article-element-thumb">
-                            <div class="article-element-info">
-                                <h4><strong>2020 종로한복축제</strong></h4>
-                                <p>2020-10-09 ~ 2020-10-31</p>
-                                <p>서울시 종로구 일대</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./images/festival.jpg" alt="" class="article-element-thumb">
-                            <div class="article-element-info">
-                                <h4><strong>2020 종로한복축제</strong></h4>
-                                <p>2020-10-09 ~ 2020-10-31</p>
-                                <p>서울시 종로구 일대</p>
-                            </div>
-                        </a>
-                    </li>
+                    <script src="./js/attraction.js"></script>
                 </ul>
             </div>
         </section>
