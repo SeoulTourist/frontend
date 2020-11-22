@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/search_style.css">
+    <script src="./js/attraction.js"></script>
     <title>SEOUL TRAVEL</title>
 </head>
 
@@ -68,17 +69,17 @@
             <div class="searchPanel">
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input id="sights-search" type="text" name="sights-search" placeholder="키워드 검색"
-                        class="search-input">
+                    <input id="attraction-search" type="text" name="attraction-search" placeholder="키워드 검색"
+                        class="search-input" onkeypress="a_search()">
                 </div>
                 <div class="category">
                     <span class="search-title"><strong>분류</strong></span>
                     <div>
-                        <a href="#" class="category-element">전체</a>
-                        <a href="#" class="category-element">랜드마크</a>
-                        <a href="#" class="category-element">고궁</a>
-                        <a href="#" class="category-element">역사적 장소</a>
-                        <a href="#" class="category-element">박물관</a>
+                        <a href="#" class="category-element" onclick="attraction(0, 8)">전체</a>
+                        <a href="#" class="category-element" onclick="attraction(0, 3)">인문(문화/예술/역사)</a>
+                        <a href="#" class="category-element" onclick="attraction(3, 5)">자연</a>
+                        <a href="#" class="category-element" onclick="attraction(5, 6)">문화시설</a>
+                        <a href="#" class="category-element" onclick="attraction(6, 8)">쇼핑</a>
                     </div>
                 </div>
                 <div class="location">
@@ -94,7 +95,9 @@
             </div>
             <div class="article-list">
                 <ul class="article-element">
-                    <script src="./js/attraction.js"></script>
+                    <script type="text/javascript">
+                        attraction(0, 8);
+                    </script>
                 </ul>
             </div>
         </section>
