@@ -71,7 +71,7 @@ img {
     display: flex;
     margin: 0 auto;
     height: 38px;
-    width: 800px;
+    width: 70%;
     background-color: white;
     align-items: center;
     border-radius: 10px;
@@ -147,14 +147,15 @@ img {
 .article-element {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: center; */
     list-style: none;
     padding: 0;
 }
 
 .article-element>li {
     width: 23%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin: 0 0.9% 20px 0.9%;
     border: 1px solid #eee;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
