@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/search_style.css">
+    <script src="./js/attraction.js"></script>
     <title>SEOUL TRAVEL</title>
 </head>
 
@@ -68,23 +69,23 @@
             <div class="searchPanel">
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input id="sights-search" type="text" name="sights-search" placeholder="키워드 검색"
-                        class="search-input">
+                    <input id="events-search" type="text" name="events-search" placeholder="키워드 검색"
+                        class="search-input" onkeypress="e_search()">
                 </div>
                 <div class="category">
                     <span class="search-title"><strong>분류</strong></span>
                     <div>
-                        <a href="#" class="category-element">전체</a>
-                        <a href="#" class="category-element">문화행사</a>
-                        <a href="#" class="category-element">문화교양</a>
-                        <a href="#" class="category-element">공연행사</a>
-                        <a href="#" class="category-element">축제</a>
+                        <a href="#" class="category-element" onclick="events(0, 5)">전체</a>
+                        <a href="#" class="category-element" onclick="events(0, 3)">축제</a>
+                        <a href="#" class="category-element" onclick="events(3, 5)">공연/행사</a>
                     </div>
                 </div>
             </div>
             <div class="article-list">
                 <ul class="article-element">
-                    <script src="./js/attraction.js"></script>
+                    <script type="text/javascript">
+                        events(0, 5);
+                    </script>
                 </ul>
             </div>
         </section>
