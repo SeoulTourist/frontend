@@ -62,7 +62,7 @@ img {
 .searchPanel {
     background-color: #f7f7f7;
     padding: 24px;
-    margin: 36px 0px;
+    margin: 36px 10px;
     /*border: 1px solid lightgray;*/
     border-radius: 10px;
 }
@@ -177,6 +177,33 @@ img {
 .article-element-info>p {
     margin-top: 10px;
     color: #0066eb;
+}
+
+.details {
+    margin: 0px 10px;
+}
+
+.details-title {
+    text-align: center;
+    margin: 30px 0px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.details-main {
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.details-info {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.details-main-img {
+    max-width: 500px;
 }
 
 footer {
