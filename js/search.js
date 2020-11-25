@@ -1,3 +1,43 @@
+function map() {
+    $('.fa-angle-up').toggleClass('clicked');
+    if($('.location-map').css('display') == 'none') {
+        $('.location-map').show();
+    }
+    else {
+        $('.location-map').hide();
+    }
+}
+
+function area(code) {
+    $(".article-element").html('');
+    $.getJSON('/js/attraction.json', function (data) {
+        for (let i = 0; i < 8; i++) {
+            for (let j = 0; j < 12; j++) {
+                let thumbnail, title, location, gu;
+                gu = data[i].response.body.items.item[j].sigungucode;
+
+                if (code == gu) {
+                    thumbnail = data[i].response.body.items.item[j].firstimage;
+                    title = data[i].response.body.items.item[j].title;
+                    location = data[i].response.body.items.item[j].addr1;
+
+                    var list = '';
+                    list += '<li>';
+                    list += '<a href="#">';
+                    list += '<img src=' + thumbnail + ' class="article-element-thumb">';
+                    list += '<div class="article-element-info">';
+                    list += '<h4><strong>' + title + '</strong></h4>';
+                    list += '<p>' + location + '</p>';
+                    list += '</div></a></li>'
+                    $(".article-element").append(list);
+                } else {
+                    continue;
+                }
+            }
+        }
+    })
+}
+
 function attraction(start, end) {
     $(".article-element").html('');
     $.getJSON('/js/attraction.json', function (data) {
