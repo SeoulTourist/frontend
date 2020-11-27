@@ -14,6 +14,56 @@
     <link rel="stylesheet" href="../css/search.css">
     <script src="../js/details.js"></script>
     <title>SEOUL TRAVEL</title>
+    <style>
+        button {
+            text-align: center;
+        }
+
+        #like-button {
+            color: gray;
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: transparent;
+            margin: 0 20px;
+            padding: 0.333em 1em 0.25em;
+            border: 0.1em solid;
+            border-radius: 1em;
+            line-height: 1.2em;
+            cursor: pointer;
+            transition: color 150ms ease-in-out, background-color 150ms ease-in-out, transform 150ms ease-in-out;
+            outline: 0;
+        }
+
+        #like-button:hover {
+            color: #0066eb;
+        }
+
+        #like-button:active {
+            transform: scale(0.95);
+        }
+
+        #like-button.selected {
+            color: #fff;
+            background-color: #0066eb;
+            border-color: #0066eb;
+        }
+
+        #like-button .heart-icon {
+            display: inline-block;
+            fill: currentColor;
+            width: 0.8em;
+            height: 0.8em;
+            margin-right: 0.2em;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const likeBtn = document.getElementById('like-button');
+            likeBtn.addEventListener('click', () => {
+                likeBtn.classList.toggle('selected');
+            })
+        }
+    </script>
 </head>
 
 <body>

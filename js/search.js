@@ -60,7 +60,7 @@ function data(requestUrl) {
                 if(items[i].firstimage == undefined) {
                     continue;
                 }
-                var url = "details?contentid=" + items[i].contentid;
+                var url = "details.html?contentid=" + items[i].contentid;
                 var list = '';
                 list += '<li>';
                 list += '<a href=' + url + '>';
@@ -87,7 +87,7 @@ function searchdata(category, requestUrl) {
                 if(items[i].firstimage == undefined) {
                     continue;
                 }
-                var url = "details?contentid=" + items[i].contentid;
+                var url = "details.html?contentid=" + items[i].contentid;
                 if((items[i].cat2 == 'A0207' || items[i].cat == 'A0208') && category == 'events') {
                     var list = '';
                     list += '<li>';
