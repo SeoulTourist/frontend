@@ -1,30 +1,30 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
+/* h1, h2, h3, h4, header, .main-overlay-text {
+  font-family: 'Noto Sans KR', sans-serif;
+} */
+
 h1 {
-  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 2.2em;
   color: black;
 }
 
 h2 {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 2em;
   color: black;
 }
 
 h3{
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.5em;
   color: black;
 }
 
 h4 {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.2em;
   color: black;
@@ -39,9 +39,6 @@ hr {
   border: 2px solid #bcbbbb;
   margin: 10px;
 }
-
-
-
 
 a{
   color:black;
@@ -71,7 +68,6 @@ img {
 
 /***** HEADER ******/
 .header{
-  font-family: "Roboto", sans-serif;
   /* background-color: dodgerblue; */
 }
 .header-image {
@@ -80,7 +76,9 @@ img {
   margin-top: 10px;
 }
 
-
+.row {
+  align-items: center;
+}
 
 .name-title {
   text-align: center;
@@ -109,7 +107,6 @@ img {
 }
 
 .main-overlay-text {
-  font-family: "Roboto", sans-serif;
   font-size: 1.6em;
   padding-top: 20px;
   font-weight: 500;
