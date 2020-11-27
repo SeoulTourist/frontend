@@ -79,17 +79,17 @@
             <div class="searchPanel">
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input id="attraction-search" type="text" name="attraction-search" placeholder="키워드 검색"
-                        class="search-input" onkeypress="a_search()">
+                    <input id="search" type="text" name="search" placeholder="키워드 검색"
+                        class="search-input" onkeypress="search('attraction')">
                 </div>
                 <div class="category">
                     <span class="search-title"><strong>분류</strong></span>
                     <div>
-                        <a href="#" class="category-element" onclick="attraction(0, 8)">전체</a>
-                        <a href="#" class="category-element" onclick="attraction(0, 3)">인문(문화/예술/역사)</a>
-                        <a href="#" class="category-element" onclick="attraction(3, 5)">자연</a>
-                        <a href="#" class="category-element" onclick="attraction(5, 6)">문화시설</a>
-                        <a href="#" class="category-element" onclick="attraction(6, 8)">쇼핑</a>
+                        <a href="#" class="category-element" onclick="attraction(12, '')">전체</a>
+                        <a href="#" class="category-element" onclick="attraction(12, 'A02')">인문(문화/예술/역사)</a>
+                        <a href="#" class="category-element" onclick="attraction(12, 'A01')">자연</a>
+                        <a href="#" class="category-element" onclick="attraction(14, '')">문화시설</a>
+                        <a href="#" class="category-element" onclick="attraction(38, '')">쇼핑</a>
                     </div>
                 </div>
                 <div class="location">
@@ -133,7 +133,7 @@
             <div class="article-list">
                 <ul class="article-element">
                     <script type="text/javascript">
-                        attraction(0, 8);
+                        attraction(12, '');
                     </script>
                 </ul>
             </div>
