@@ -8,53 +8,66 @@ function map() {
     }
 }
 
+const serviceKey = "Q1rnD0P2lMbHzUSEqclxucsYKUIwcWXh%2BV48SXPuLPs7%2FxbrkIMg%2BN2HV9ELlnWxyawWxv4xQuo4BkUsFgs%2FYg%3D%3D";
+
+function attraction(id, code) {
+    var requestUrl = '';
+    requestUrl += "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=";
+    requestUrl += serviceKey;
+    requestUrl += "&contentTypeId=" + id + "&areaCode=1&sigunguCode=&";
+    requestUrl += "cat1=" + code + "&cat2=&cat3=&listYN=Y&firstImageYN=Y&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&arrange=P&numOfRows=100&pageNo=1&_type=json";
+    data(requestUrl);
+}
+
+function events(code) {
+    var requestUrl = '';
+    requestUrl += "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=";
+    requestUrl += serviceKey;
+    requestUrl += "&contentTypeId=15&areaCode=1&sigunguCode=&cat1=A02&";
+    requestUrl += "cat2=" + code + "&cat3=&listYN=Y&firstImageYN=Y&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&arrange=P&numOfRows=100&pageNo=1&_type=json";
+    data(requestUrl);
+}
+
 function area(code) {
-    $(".article-element").html('');
-    $.getJSON('/js/attraction.json', function (data) {
-        for (let i = 0; i < 8; i++) {
-            for (let j = 0; j < 12; j++) {
-                let thumbnail, title, location, gu;
-                gu = data[i].response.body.items.item[j].sigungucode;
-
-                if (code == gu) {
-                    thumbnail = data[i].response.body.items.item[j].firstimage;
-                    title = data[i].response.body.items.item[j].title;
-                    location = data[i].response.body.items.item[j].addr1;
-
-                    var list = '';
-                    list += '<li>';
-                    list += '<a href="#">';
-                    list += '<img src=' + thumbnail + ' class="article-element-thumb">';
-                    list += '<div class="article-element-info">';
-                    list += '<h4><strong>' + title + '</strong></h4>';
-                    list += '<p>' + location + '</p>';
-                    list += '</div></a></li>'
-                    $(".article-element").append(list);
-                } else {
-                    continue;
-                }
-            }
-        }
-    })
+    var requestUrl = '';
+    requestUrl += "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=";
+    requestUrl += serviceKey;
+    requestUrl += "&contentTypeId=12&areaCode=1&"
+    requestUrl += "sigunguCode=" + code + "&cat1=&cat2=&cat3=&listYN=Y&firstImageYN=Y&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&arrange=P&numOfRows=100&pageNo=1&_type=json";
+    data(requestUrl);
 }
 
-function attraction(start, end) {
-    $(".article-element").html('');
-    $.getJSON('/js/attraction.json', function (data) {
-        for (let i = start; i < end; i++) {
-            for (let j = 0; j < 12; j++) {
-                let thumbnail, title, location;
-                thumbnail = data[i].response.body.items.item[j].firstimage;
-                title = data[i].response.body.items.item[j].title;
-                location = data[i].response.body.items.item[j].addr1;
+function search(category) {
+    var temp = document.getElementById('search').value;
+    var key = encodeURI(temp);
+    var requestUrl = '';
+    requestUrl += "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchKeyword?ServiceKey=";
+    requestUrl += serviceKey;
+    requestUrl += "&keyword=" + key;
+    requestUrl += "&areaCode=1&sigunguCode=&cat1=&cat2=&cat3=&listYN=Y&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&arrange=O&numOfRows=100&pageNo=1&_type=json";
+    searchdata(category, requestUrl);
+}
 
+function data(requestUrl) {
+    $.ajax({
+        type: "get",
+        url: requestUrl,
+        datatype: 'json',
+        success: function(msg){
+            var items = msg.response.body.items.item;
+            $(".article-element").html('');
+            for(var i=0; i < items.length; i++) {
+                if(items[i].firstimage == undefined) {
+                    continue;
+                }
+                var url = "details?contentid=" + items[i].contentid;
                 var list = '';
                 list += '<li>';
-                list += '<a href="#">';
-                list += '<img src=' + thumbnail + ' class="article-element-thumb">';
+                list += '<a href=' + url + '>';
+                list += '<img src=' + items[i].firstimage + ' class="article-element-thumb">';
                 list += '<div class="article-element-info">';
-                list += '<h4><strong>' + title + '</strong></h4>';
-                list += '<p>' + location + '</p>';
+                list += '<h4><strong>' + items[i].title + '</strong></h4>';
+                list += '<p>' + items[i].addr1 + '</p>';
                 list += '</div></a></li>'
                 $(".article-element").append(list);
             }
@@ -62,85 +75,40 @@ function attraction(start, end) {
     })
 }
 
-function a_search() {
-    const key = document.getElementById('attraction-search').value;
-    $(".article-element").html('');
-    $.getJSON('/js/attraction.json', function (data) {
-        for (let i = 0; i < 8; i++) {
-            for (let j = 0; j < 12; j++) {
-                let thumbnail, title, location;
-                title = data[i].response.body.items.item[j].title;
-
-                if (title.indexOf(key) != -1) {
-                    thumbnail = data[i].response.body.items.item[j].firstimage;
-                    location = data[i].response.body.items.item[j].addr1;
-
-                    var list = '';
-                    list += '<li>';
-                    list += '<a href="#">';
-                    list += '<img src=' + thumbnail + ' class="article-element-thumb">';
-                    list += '<div class="article-element-info">';
-                    list += '<h4><strong>' + title + '</strong></h4>';
-                    list += '<p>' + location + '</p>';
-                    list += '</div></a></li>'
-                    $(".article-element").append(list);
-                } else {
+function searchdata(category, requestUrl) {
+    $.ajax({
+        type: "get",
+        url: requestUrl,
+        datatype: 'json',
+        success: function(msg){
+            var items = msg.response.body.items.item;
+            $(".article-element").html('');
+            for(var i=0; i < items.length; i++) {
+                if(items[i].firstimage == undefined) {
                     continue;
                 }
-            }
-        }
-    })
-}
-
-function events(start, end) {
-    $(".article-element").html('');
-    $.getJSON('/js/events.json', function (data) {
-        for (let i = start; i < end; i++) {
-            for (let j = 0; j < 12; j++) {
-                let thumbnail, title, location;
-                thumbnail = data[i].response.body.items.item[j].firstimage;
-                title = data[i].response.body.items.item[j].title;
-                location = data[i].response.body.items.item[j].addr1;
-
-                var list = '';
-                list += '<li>';
-                list += '<a href="#">';
-                list += '<img src=' + thumbnail + ' class="article-element-thumb">';
-                list += '<div class="article-element-info">';
-                list += '<h4><strong>' + title + '</strong></h4>';
-                list += '<p>' + location + '</p>';
-                list += '</div></a></li>'
-                $(".article-element").append(list);
-            }
-        }
-    })
-}
-
-function e_search() {
-    console.log('d');
-    const key = document.getElementById('events-search').value;
-    $(".article-element").html('');
-    $.getJSON('/js/events.json', function (data) {
-        for (let i = 0; i < 5; i++) {
-            for (let j = 0; j < 12; j++) {
-                let thumbnail, title, location;
-                title = data[i].response.body.items.item[j].title;
-
-                if (title.indexOf(key) != -1) {
-                    thumbnail = data[i].response.body.items.item[j].firstimage;
-                    location = data[i].response.body.items.item[j].addr1;
-
+                var url = "details?contentid=" + items[i].contentid;
+                if((items[i].cat2 == 'A0207' || items[i].cat == 'A0208') && category == 'events') {
                     var list = '';
                     list += '<li>';
-                    list += '<a href="#">';
-                    list += '<img src=' + thumbnail + ' class="article-element-thumb">';
+                    list += '<a href=' + url + '>';
+                    list += '<img src=' + items[i].firstimage + ' class="article-element-thumb">';
                     list += '<div class="article-element-info">';
-                    list += '<h4><strong>' + title + '</strong></h4>';
-                    list += '<p>' + location + '</p>';
+                    list += '<h4><strong>' + items[i].title + '</strong></h4>';
+                    list += '<p>' + items[i].addr1 + '</p>';
                     list += '</div></a></li>'
                     $(".article-element").append(list);
-                } else {
-                    continue;
+                }
+                if((((items[i].cat2 == 'A0207')==false) && ((items[i].cat == 'A0208')==false)) && category == 'attraction') {
+                    var list = '';
+                    list += '<li>';
+                    list += '<a href=' + url + '>';
+                    list += '<img src=' + items[i].firstimage + ' class="article-element-thumb">';
+                    list += '<div class="article-element-info">';
+                    list += '<h4><strong>' + items[i].title + '</strong></h4>';
+                    list += '<p>' + items[i].addr1 + '</p>';
+                    list += '</div></a></li>'
+                    $(".article-element").append(list);
                 }
             }
         }
