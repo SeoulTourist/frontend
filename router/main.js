@@ -16,6 +16,10 @@ module.exports = function(app)
         res.render('attraction.html');
     });
 
+    app.get('/details', function(req, res) {
+        res.render('details.html');
+    });
+
     app.get('/mypage', function(req, res) {
         res.render('mypage.html');
     });
