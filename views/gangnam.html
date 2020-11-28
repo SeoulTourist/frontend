@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEOUL TRAVEL</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="../css/grid.css">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/search_style.css">
   
 </head>
 
@@ -17,35 +19,51 @@
   <div class="container">
 
     <!-- Header -->
-    <header class="row">
-      <div class="col-2"><a href="./main.html">
-        <img src="../images/ssss.png" alt="Logo Image" class="header-image">
-        </a>
-      </div>
-     
-      <div class="col-2"> <a href="../views/attraction.html">
-        <h3 class="name-title">지역</h3>
-        <h4 class="name-title">Area</h4></a>
-      </div>
-      <div class="col-2"><a href="../views/events.html">
-        <h3 class="name-title">문화 행사</h3>
-        <h4 class="name-title">Events</h4>
-      </a></div>
+    <header class="header" >
+      <nav class="row">
+        <div class="col-2"><a href="./main.html">
+          <img src="../images/ssss.png" alt="Logo Image" class="header-image">
+          </a>
+        </div>
 
-      <div class="col-2"><a href="../view/attraction.html">
-        <h3 class="name-title">관광지</h3>
-        <h4 class="name-title">Attraction</h4>
-      </a></div>
-      
-      <div class="col-2"><a href="../mypage.html">
-        <h3 class="name-title">마이페이지</h3>
-        <h4 class="name-title">Mypage</h4>
-      </a></div>
-      <div class="col-2"><a href="../login.html">
-        <h3 class="name-title">로그인</h3>
-        <h4 class="name-title">Login</h4>
-      </a></div>
+        <div class="col-2 dropdown">
+          <div class="dropbtn">
+            <h3 class="name-title">지역</h3>
+            <h4 class="name-title">Area</h4></a>
+          </div>
+          <div class="dropdown-content">
+            <a href="../views/gangnam.html">강남</a>
+            <a href="../views/hongdae.html">홍대</a>
+            <a href="../views/gwanghwamun.html">광화문</a>
+            <a href="../views/itaewon.html">이태원</a>
+            <a href="../views/jamsil.html">잠실</a>
+            <a href="../views/myeongdong.html">명동</a>
+            <a href="#">기타</a>
+          </div>
+        </div>
+        <!-- <div class="col-2"> <a href="../views/attraction.html">
+          <h3 class="name-title">지역</h3>
+          <h4 class="name-title">Area</h4></a>
+        </div> -->
+        <div class="col-2"><a href="../views/events.html">
+          <h3 class="name-title">문화 행사</h3>
+          <h4 class="name-title">Events</h4>
+        </a></div>
 
+        <div class="col-2"><a href="../project.html">
+          <h3 class="name-title">관광지</h3>
+          <h4 class="name-title">Attraction</h4>
+        </a></div>
+        
+        <div class="col-2"><a href="../mypage.html">
+          <h3 class="name-title">마이페이지</h3>
+          <h4 class="name-title">Mypage</h4>
+        </a></div>
+        <div class="col-2"><a href="../login.html">
+          <h3 class="name-title">로그인</h3>
+          <h4 class="name-title">Login</h4>
+        </a></div>
+      </nav>
     </header>
 
     <hr>
@@ -66,7 +84,7 @@
         <h2>강남</h2>
       </div>
 
-      <div class="row about">
+      <div class="row about" >
           <p>
             강남구는 서울특별시의 남동부에 있는 구입니다.
             동쪽으로는 송파구, 서쪽으로는 서초구, 북쪽으로는 한강을 경계로 용산구, 성동구, 광진구, 남쪽으로는 경기도 성남시와 접하고 있습니다.
@@ -87,7 +105,7 @@
       </div>
 
 
-      <div class="row">
+      <div class="row" >
         <div class="col-8 center-text work">
           <div class="each-work">
 
@@ -107,7 +125,11 @@
             패션, 뷰티, 라이프스타일, 다양한 카페와 레스토랑을 한 자리에서 모두 만날 수 있습니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
+          
         </div>
       </div>
 
@@ -120,7 +142,10 @@
             대규모 오페라, 발레, 뮤지컬 공연 등이 이루어지는 2305석의 오페라 극장, 연극, 소규모 뮤지컬, 오페라 등이 공연되는 710석의 토월 극장, 소규모 실험 공연이 이루어지는 300~600석 가변식의 자유 소극장이 위치해 있습니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
         <div class="col-8 center-text work">
           <div class="each-work">
@@ -151,7 +176,10 @@
             특히 젊은이들의 입소문을 타고 유명세를 탄 이후 많은 영화의 배경지로 나오기도 했습니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
       </div>
     </div>
@@ -215,7 +243,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; ysu96@naver.com / 2020 Sanguk Yu</p>
+      <p>&copy; 숭실대학교 웹프로그래밍 9조</p>
     </footer>
 
   </div>
