@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEOUL TRAVEL</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="../css/grid.css">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/search_style.css">
   
 </head>
 
@@ -17,35 +19,51 @@
   <div class="container">
 
     <!-- Header -->
-    <header class="row">
-      <div class="col-2"><a href="./main.html">
-        <img src="../images/ssss.png" alt="Logo Image" class="header-image">
-        </a>
-      </div>
-     
-      <div class="col-2"> <a href="../views/attraction.html">
-        <h3 class="name-title">지역</h3>
-        <h4 class="name-title">Area</h4></a>
-      </div>
-      <div class="col-2"><a href="../views/events.html">
-        <h3 class="name-title">문화 행사</h3>
-        <h4 class="name-title">Events</h4>
-      </a></div>
+    <header class="header" >
+      <nav class="row">
+        <div class="col-2"><a href="./main.html">
+          <img src="../images/ssss.png" alt="Logo Image" class="header-image">
+          </a>
+        </div>
 
-      <div class="col-2"><a href="../views/attraction.html">
-        <h3 class="name-title">관광지</h3>
-        <h4 class="name-title">Attraction</h4>
-      </a></div>
-      
-      <div class="col-2"><a href="../mypage.html">
-        <h3 class="name-title">마이페이지</h3>
-        <h4 class="name-title">Mypage</h4>
-      </a></div>
-      <div class="col-2"><a href="../login.html">
-        <h3 class="name-title">로그인</h3>
-        <h4 class="name-title">Login</h4>
-      </a></div>
+        <div class="col-2 dropdown">
+          <div class="dropbtn">
+            <h3 class="name-title">지역</h3>
+            <h4 class="name-title">Area</h4></a>
+          </div>
+          <div class="dropdown-content">
+            <a href="../views/gangnam.html">강남</a>
+            <a href="../views/hongdae.html">홍대</a>
+            <a href="../views/gwanghwamun.html">광화문</a>
+            <a href="../views/itaewon.html">이태원</a>
+            <a href="../views/jamsil.html">잠실</a>
+            <a href="../views/myeongdong.html">명동</a>
+            <a href="#">기타</a>
+          </div>
+        </div>
+        <!-- <div class="col-2"> <a href="../views/attraction.html">
+          <h3 class="name-title">지역</h3>
+          <h4 class="name-title">Area</h4></a>
+        </div> -->
+        <div class="col-2"><a href="../views/events.html">
+          <h3 class="name-title">문화 행사</h3>
+          <h4 class="name-title">Events</h4>
+        </a></div>
 
+        <div class="col-2"><a href="../project.html">
+          <h3 class="name-title">관광지</h3>
+          <h4 class="name-title">Attraction</h4>
+        </a></div>
+        
+        <div class="col-2"><a href="../mypage.html">
+          <h3 class="name-title">마이페이지</h3>
+          <h4 class="name-title">Mypage</h4>
+        </a></div>
+        <div class="col-2"><a href="../login.html">
+          <h3 class="name-title">로그인</h3>
+          <h4 class="name-title">Login</h4>
+        </a></div>
+      </nav>
     </header>
 
     <hr>
@@ -101,7 +119,11 @@
             555m, 123층의 거대한 수직도시 롯데월드타워에는 국내 최고 높이 전망대인 서울스카이, 국내 최고 수준의 호텔 시그니엘서울, 프리미엄 헬스케어센터와 피트니스센터, 파이낸스센터가 입점한 포디엄이 위치하여 그 높이만큼 특별한 가치를 경험할 수 있습니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
       </div>
 
@@ -117,7 +139,11 @@
             잘 가꿔진 도심 속 쉼터라는 타이틀이 아깝지 않을 매력을 가지고 있는 석촌호수입니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
         <div class="col-8 center-text work">
           <div class="each-work">
@@ -149,7 +175,11 @@
             올림픽공원은 볼거리도 많고 즐길거리도 많아 그저 욕심 없이 발길 닿는 대로 돌아보는 것도 추천합니다. 
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
       </div>
     </div>
@@ -213,7 +243,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; ysu96@naver.com / 2020 Sanguk Yu</p>
+      <p>&copy; 숭실대학교 웹프로그래밍 9조</p>
     </footer>
 
   </div>
