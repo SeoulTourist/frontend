@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEOUL TRAVEL</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="../css/grid.css">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/search_style.css">
   
 </head>
 
@@ -17,37 +19,52 @@
   <div class="container">
 
     <!-- Header -->
-    <header class="row">
-      <div class="col-2"><a href="./main.html">
-        <img src="../images/ssss.png" alt="Logo Image" class="header-image">
-        </a>
-      </div>
-     
-      <div class="col-2"> <a href="../views/attraction.html">
-        <h3 class="name-title">지역</h3>
-        <h4 class="name-title">Area</h4></a>
-      </div>
-      <div class="col-2"><a href="../views/events.html">
-        <h3 class="name-title">문화 행사</h3>
-        <h4 class="name-title">Events</h4>
-      </a></div>
+    <header class="header" >
+      <nav class="row">
+        <div class="col-2"><a href="./main.html">
+          <img src="../images/ssss.png" alt="Logo Image" class="header-image">
+          </a>
+        </div>
 
-      <div class="col-2"><a href="../views/attraction.html">
-        <h3 class="name-title">관광지</h3>
-        <h4 class="name-title">Attraction</h4>
-      </a></div>
-      
-      <div class="col-2"><a href="../mypage.html">
-        <h3 class="name-title">마이페이지</h3>
-        <h4 class="name-title">Mypage</h4>
-      </a></div>
-      <div class="col-2"><a href="../login.html">
-        <h3 class="name-title">로그인</h3>
-        <h4 class="name-title">Login</h4>
-      </a></div>
+        <div class="col-2 dropdown">
+          <div class="dropbtn">
+            <h3 class="name-title">지역</h3>
+            <h4 class="name-title">Area</h4></a>
+          </div>
+          <div class="dropdown-content">
+            <a href="../views/gangnam.html">강남</a>
+            <a href="../views/hongdae.html">홍대</a>
+            <a href="../views/gwanghwamun.html">광화문</a>
+            <a href="../views/itaewon.html">이태원</a>
+            <a href="../views/jamsil.html">잠실</a>
+            <a href="../views/myeongdong.html">명동</a>
+            <a href="#">기타</a>
+          </div>
+        </div>
+        <!-- <div class="col-2"> <a href="../views/attraction.html">
+          <h3 class="name-title">지역</h3>
+          <h4 class="name-title">Area</h4></a>
+        </div> -->
+        <div class="col-2"><a href="../views/events.html">
+          <h3 class="name-title">문화 행사</h3>
+          <h4 class="name-title">Events</h4>
+        </a></div>
 
+        <div class="col-2"><a href="../project.html">
+          <h3 class="name-title">관광지</h3>
+          <h4 class="name-title">Attraction</h4>
+        </a></div>
+        
+        <div class="col-2"><a href="../mypage.html">
+          <h3 class="name-title">마이페이지</h3>
+          <h4 class="name-title">Mypage</h4>
+        </a></div>
+        <div class="col-2"><a href="../login.html">
+          <h3 class="name-title">로그인</h3>
+          <h4 class="name-title">Login</h4>
+        </a></div>
+      </nav>
     </header>
-
     <hr>
 
     <!-- Main Image -->
@@ -107,7 +124,11 @@
             무려 30개국이 넘는 세계의 전통 음식과 다양한 세계 문화가 접해있는 이태원 세계음식문화거리로 떠나봅시다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
       </div>
 
@@ -120,7 +141,11 @@
             전쟁에 대한 교훈을 통해 전쟁을 예방하고, 평화적 통일을 목적으로 합니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
         <div class="col-8 center-text work">
           <div class="each-work">
@@ -149,7 +174,11 @@
             망원동의 망리단길, 송파의 송리단길, 황남동의 황리단길 등 이색적이고 특색있는 수많은 유사품 길을 만들어 낼 정도로 전국적으로도 유명한 테마길 중 하나입니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
       </div>
     </div>
@@ -213,7 +242,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; ysu96@naver.com / 2020 Sanguk Yu</p>
+      <p>&copy; 숭실대학교 웹프로그래밍 9조</p>
     </footer>
 
   </div>
