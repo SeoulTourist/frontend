@@ -73,6 +73,21 @@ function detailInfo(typeid) {
                 info += '<li><strong>관람 가능연령</strong> : ' + item.agelimit + '</li>';
                 info += '<li><strong>이용요금</strong> : ' + item.usetimefestival + '</li>';
             }
+            if (typeid == 14) {
+                info += '<div><ul><li><strong>문의 및 안내</strong> : ' + item.infocenterculture + '</li>';
+                info += '<li><strong>휴무일</strong> : ' + item.restdateculture + '</li>';
+                info += '<li><strong>이용시간</strong> : ' + item.usetimeculture + '</li>';
+                info += '<li><strong>이용요금</strong> : ' + item.usefee + '</li>';
+                info += '<li><strong>주차시설</strong> : ' + item.parkingculture + '</li>';
+                info += '<li><strong>유모차 대여 여부</strong> : ' + item.chkbabycarriageculture + '</li>';
+                info += '<li><strong>애완동물 동반 가능 여부</strong> : ' + item.chkpetculture + '</li>';
+            }
+            if (typeid == 38) {
+                info += '<div><ul><li><strong>문의 및 안내</strong> : ' + item.infocentershopping + '</li>';
+                info += '<li><strong>휴무일</strong> : ' + item.restdateshopping + '</li>';
+                info += '<li><strong>영업시간</strong> : ' + item.opentime + '</li>';
+                info += '<li><strong>판매품목</strong> : ' + item.saleitem + '</li>';
+            }
             $(".details").append(info);
         }
     })
