@@ -98,7 +98,7 @@ function maindata(requestUrl) {
                     continue;
                 }
                 $("#slide"+i).html('');
-                var url = "details.html?contentid=" + items[i].contentid;
+                var url = "views/details.html?contentid=" + items[i].contentid;
                 var list = '';
                 list += '<a href=' + url + '>';
                 list += '<img src=' + items[i].firstimage + ' height="300px">';
