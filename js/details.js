@@ -88,6 +88,14 @@ function detailInfo(typeid) {
                 info += '<li><strong>영업시간</strong> : ' + item.opentime + '</li>';
                 info += '<li><strong>판매품목</strong> : ' + item.saleitem + '</li>';
             }
+            if (typeid == 28) {
+                info += '<div><ul><li><strong>문의 및 안내</strong> : ' + item.infocenterleports + '</li>';
+                info += '<li><strong>휴무일</strong> : ' + item.restdateleports + '</li>';
+                info += '<li><strong>이용시간</strong> : ' + item.usetimeleports + '</li>';
+                info += '<li><strong>이용요금</strong> : ' + item.usefeeleports + '</li>';
+                info += '<li><strong>주차시설</strong> : ' + item.parkingleports + '</li>';
+
+            }
             $(".details").append(info);
         }
     })
