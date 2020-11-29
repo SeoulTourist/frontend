@@ -14,7 +14,6 @@
 .button:hover {
   background-color: #000;
 }
-   
 
 .dropbtn {
   /* background-color: #ea2129; */
@@ -146,6 +145,7 @@ img {
 .main-image {
   position: relative;
   overflow: hidden;
+  z-index: -1;
 }
 
 .main-overlay {
@@ -250,10 +250,11 @@ img {
 /***** FOOTER ******/
 footer {
   width: 100%;
-  height: 20px;
-  padding-top: 10px;
+  height: auto;
+  padding: 10px 0px 10px 0px;
   text-align: center;
-  color: #879;
+  background-color: #eee;
+  color: #666;
 }
 
 @media screen and (min-width: 620px) {
