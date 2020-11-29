@@ -28,6 +28,15 @@ function events(code) {
     data(requestUrl);
 }
 
+function mainevents(code) {
+    var requestUrl = '';
+    requestUrl += "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=";
+    requestUrl += serviceKey;
+    requestUrl += "&contentTypeId=15&areaCode=1&sigunguCode=&cat1=A02&";
+    requestUrl += "cat2=" + code + "&cat3=&listYN=Y&firstImageYN=Y&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&arrange=P&numOfRows=100&pageNo=1&_type=json";
+    maindata(requestUrl);
+}
+
 function area(code) {
     var requestUrl = '';
     requestUrl += "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=";
@@ -70,6 +79,31 @@ function data(requestUrl) {
                 list += '<p>' + items[i].addr1 + '</p>';
                 list += '</div></a></li>'
                 $(".article-element").append(list);
+            }
+        }
+    })
+}
+
+function maindata(requestUrl) {
+    $.ajax({
+        type: "get",
+        url: requestUrl,
+        datatype: 'json',
+        success: function(msg){
+            var items = msg.response.body.items.item;
+            
+
+            for(var i=0; i < 8; i++) {
+                if(items[i].firstimage == undefined) {
+                    continue;
+                }
+                $("#slide"+i).html('');
+                var url = "details.html?contentid=" + items[i].contentid;
+                var list = '';
+                list += '<a href=' + url + '>';
+                list += '<img src=' + items[i].firstimage + ' height="300px">';
+                list += '</a>';     
+                $("#slide"+i).append(list);
             }
         }
     })
