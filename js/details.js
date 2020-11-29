@@ -25,7 +25,6 @@ function detailCommon() {
             common += '<li><strong>홈페이지</strong> : ' + item.homepage + '</li>';
             common += '<li><strong>주소</strong> : ' + item.addr1 + '</li></ul>';
             // 좋아요 버튼
-            console.log('s');
             common += '<button type="button" id="like-button"><svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M91.6 13A28.7 28.7 0 0 0 51 13l-1 1-1-1A28.7 28.7 0 0 0 8.4 53.8l1 1L50 95.3l40.5-40.6 1-1a28.6 28.6 0 0 0 0-40.6z"/></svg>Like</button></div></div>';
             common += '<div class="details-info1"><h3>소개</h3>';
             common += '<p>' + item.overview + '</p></div>'
@@ -81,7 +80,6 @@ function detailInfo(typeid) {
 }
 
 function likeBtn() {
-    console.log('d');
     const likeBtn = document.getElementById('like-button');
     likeBtn.addEventListener('click', () => {
         likeBtn.classList.toggle('selected');
