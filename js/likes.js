@@ -115,22 +115,42 @@ async function likeCards(){
 //       );
 //     });
 //   };
+function getItem(requestUrl){
+    let data;
+    $.ajax({
+        type: "get",
+        url: requestUrl,
+        datatype: 'json',
+        async:false,
+        success: function (msg) {
+            data= msg.response.body.items.item;
+            console.log(data)
+           
+        }
+       
+    })
+    console.log(data)
+    return data;
+}
 async function likeCard(like) {
-    
-   console.log(like)
+    let URL = `http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=Q1rnD0P2lMbHzUSEqclxucsYKUIwcWXh%2BV48SXPuLPs7%2FxbrkIMg%2BN2HV9ELlnWxyawWxv4xQuo4BkUsFgs%2FYg%3D%3D&contentId=${like}&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y&transGuideYN=Y&_type=json`
+   console.log(like,URL)
+   let item = getItem(URL)
+   console.log(item)
+
  let common = '';
  common += '<div class="col-md-4">'
  common +='<div class="card mb-4 shadow-sm">'
- common +='<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>'
+ common +='<img src = '+item.firstimage+'>'+'<rect width="100%" height="100%" fill="#55595c"/></img>'
  common += '<div class="card-body">'
- common +=  '<p class="card-text">location description</p>'
+ common +=  '<p class="card-text">'+item.title+'</p>'
  common += '<div class="d-flex justify-content-between align-items-center">'
  common +='<div class="btn-group">'
- common +='<button type="button" class="btn btn-sm btn-outline-secondary">View</button>'
- common +='<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>'
- common +='</div><small class="text-muted">9 mins</small></div></div></div></div>'
+ common +='<button type="button" class="btn btn-sm btn-outline-secondary" >View</button>'
+
+ common +='</div></div></div></div></div>'
             common +=
-                $(".row").append(common);
+                $(".likes").append(common);
  
 
 
