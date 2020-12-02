@@ -58,6 +58,7 @@ function search(category) {
 }
 
 function data(requestUrl) {
+    console.log(requestUrl)
     $.ajax({
         type: "get",
         url: requestUrl,

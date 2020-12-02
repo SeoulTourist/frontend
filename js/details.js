@@ -1,6 +1,7 @@
 var temp = location.href.split("?");
 var data = temp[1].split("=");
 const contentId = data[1];
+console.log("data[1]",data[1])
 const serviceKey = "Q1rnD0P2lMbHzUSEqclxucsYKUIwcWXh%2BV48SXPuLPs7%2FxbrkIMg%2BN2HV9ELlnWxyawWxv4xQuo4BkUsFgs%2FYg%3D%3D";
 
 function detailCommon() {
@@ -9,7 +10,7 @@ function detailCommon() {
     requestUrl += serviceKey;
     requestUrl += "&contentId=" + contentId;
     requestUrl += "&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y&transGuideYN=Y&_type=json";
-
+    console.log(requestUrl)
     $.ajax({
         type: "get",
         url: requestUrl,
@@ -99,12 +100,30 @@ function detailInfo(typeid) {
             $(".details").append(info);
         }
     })
+
     likeBtn();
+
 }
 
 function likeBtn() {
     const likeBtn = document.getElementById('like-button');
     likeBtn.addEventListener('click', () => {
         likeBtn.classList.toggle('selected');
+     
+        let onSelect =likeBtn.className
+        if( onSelect==='selected'){
+            $.ajax({
+                type: "post",
+                url: 'http://localhost:7000/admin/like',
+                 datatype: 'json',
+                 contentType: "application/json; charset=utf-8",
+                data:JSON.stringify({contentId:contentId}),
+               success: function(data){
+       
+                 console.log(data)
+                 }
+                }) 
+        }
+        else  console.log("notselected")   //post 기능 추가 
     })
 }

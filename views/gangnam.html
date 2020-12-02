@@ -7,11 +7,31 @@
   <title>SEOUL TRAVEL</title>
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
   <link rel="stylesheet" href="../css/grid.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/search.css">
-
+  <script src="../js/review.js"></script>
+  <script> $(document).ready(function (e) {
+     $('form').submit(function () {
+                
+                 console.log($('.review').val(),Number($('.review').attr('id')))
+              
+                $.ajax({
+                     type: "put",
+                     url: 'http://localhost:7000/admin/review',
+                      datatype: 'json',
+                      contentType: "application/json; charset=utf-8",
+                     data:JSON.stringify({locationId:1,destDescription:$('.review').val()||null,destId:Number($('.review').attr('id'))}),
+                    success: function(data){
+            
+                      console.log(data)
+                      }
+                     }) 
+              
+                event.preventDefault();
+            });
+})</script>
 </head>
 
 <body>
@@ -121,8 +141,10 @@
             코엑스몰은 세계적인 건축설계사 겐슬러가 공간의 개방성과 연계성을 극대화하는 열린하늘 컨셉으로 디자인하였습니다.
             패션, 뷰티, 라이프스타일, 다양한 카페와 레스토랑을 한 자리에서 모두 만날 수 있습니다.
           </p>
-          <textarea class="review">리뷰를 남겨주세요.</textarea>
-          <input type="submit" value="등록">
+          <form id="review-form1">
+          <input class="review" placeholder="리뷰를 남겨주세요." id="1" ></input>
+          <input type="submit" value="등록" >
+          </form>
           <div class="row">
             <button class="button" display="block">LIKE</button>
           </div>
