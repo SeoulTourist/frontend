@@ -9,49 +9,10 @@
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="css/swiper.min.css">
-
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./js/search.js"></script>
 </head>
 
 <body>
@@ -60,27 +21,43 @@
 
     <!-- Header -->
     <header class="row">
+      
       <div class="col-2"><a href="main.html">
         <img src="./images/ssss.png" alt="Logo Image" class="header-image">
         </a>
       </div>
-     
-      <div class="col-2"> <a href="views/attraction.html">
-        <h3 class="name-title">지역</h3>
-        <h4 class="name-title">Area</h4></a>
+
+      <div class="col-2 dropdown">
+        <div class="dropbtn">
+          <h3 class="name-title">지역</h3>
+          <h4 class="name-title">Area</h4>
+        </div>
+        <div class="dropdown-content">
+          <a href="gangnam.html">강남</a>
+          <a href="hongdae.html">홍대</a>
+          <a href="gwanghwamun.html">광화문</a>
+          <a href="itaewon.html">이태원</a>
+          <a href="jamsil.html">잠실</a>
+          <a href="myeongdong.html">명동</a>
+          <a href="#">기타</a>
+        </div>
       </div>
+
       <div class="col-2"> <a href="views/events.html">
         <h3 class="name-title">문화 행사</h3>
         <h4 class="name-title">Events</h4></a>
       </div>
+
       <div class="col-2"> <a href="views/attraction.html">
         <h3 class="name-title">관광지</h3>
         <h4 class="name-title">attraction</h4></a>
       </div>
-      <div class="col-2"> <a href="./mypage.html">
+
+      <div class="col-2"> <a href="views/mypage.html">
         <h3 class="name-title">마이페이지</h3>
         <h4 class="name-title">Mypage</h4></a>
       </div>
+
       <div class="col-2"> <a href="./login.html">
         <h3 class="name-title">로그인</h3>
         <h4 class="name-title">Login</h4></a>
@@ -93,162 +70,148 @@
     <!-- Main Image -->
     <div class="row">
       <div class="main-image col-12 center-text">
-        <img src="./images/title.jpg" height="500px" alt="main image">
+        <img src="./images/title.jpg" sizes="100vw" alt="main image">
         <div class="main-overlay center-text">
-          <br><p class="main-overlay-text">KOREA</p>
+          <br><p class="main-overlay-text">SEOUL</p>
         </div>
       </div>
     </div>
+    
 
-    <!-- Test -->
     <section>
+      <div class="row" style="margin-top:150px">    
 
-      <div class="row" style="margin-top:100px">      
-            <div class="row">
-            <div class="col-4 center-text">
-              <a href="project.html">
-              <div class="each-work" style="height: 260px;">
-                <img src="./images/coex.jpg" alt="work image 1">
-                <div class="work-overlay">
-                  <br><br><br><br>
-                  <p>자세히 보기</p>
-                </div>         
-              </div>
-              <h3>코엑스</h3>
-            </a>
+        <div class="col-4 center-text"><a href="views/gangnam.html">           
+          <div class="each-work" style="height: 260px;">
+            <img src="./images/gangnam/gangnam.jpg" alt="work image 1" style="height: 260px">
+            <div class="work-overlay"><br><br><br><br>
+              <p>자세히 보기</p>
+            </div>         
+          </div>
+          <h3>강남</h3></a>
+        </div>
+
+        <div class="col-4 center-text"><a href="views/gwanghwamun.html">                 
+          <div class="each-work" style="height: 260px;">
+            <img src="./images/gwanghwamun/gwanghwamun.jpg" alt="work image 1" style="height: 260px">
+            <div class="work-overlay"><br><br><br><br> 
+              <p>자세히 보기</p>
             </div>
+          </div>
+          <h3>광화문</h3></a>
+        </div>
 
-              <div class="col-4 center-text">
-                <a href="project.html">  
-                <div class="each-work" style="height: 260px;">
-                  <img src="./images/art.jpg" alt="work image 1">
-                  <div class="work-overlay">
-                    <br><br><br><br>
-                    <p>자세히 보기</p>
-                  </div>
-                </div>
-                <h3>예술의 전당</h3>
-              </a>
-              </div>
+        <div class="col-4 center-text"><a href="views/hongdae.html">    
+          <div class="each-work right" style="height: 260px;">
+            <img src="./images/hongdae/hongdae1.jpg" alt="work image 1" style="height: 260px">
+            <div class="work-overlay"><br><br><br><br>
+              <p>자세히 보기</p>
+            </div>
+          </div>
+          <h3>홍대</h3></a>
+        </div> 
 
-                <div class="col-4 center-text">
-                  <a href="project.html">
-                  <div class="each-work right" style="height: 260px;">
-                    <img src="./images/coex.jpg" alt="work image 1">
-                    <div class="work-overlay">
-                      <br><br><br><br>
-                      <p>자세히 보기</p>
-                    </div>
-                  </div>
-                  <h3>코엑스</h3>
-                </a>
-                </div> 
+      </div>
+    </section>
+
+    <section>     
+      <div class="row">
+
+        <div class="col-4 center-text"><a href="views/itaewon.html">
+          <div class="each-work" style="height: 260px;">
+            <img src="./images/itaewon/itaewon2.png" alt="work image 1" style="height: 260px">
+            <div class="work-overlay"><br><br><br><br>
+              <p>자세히 보기</p>
+            </div>         
+          </div>
+          <h3>이태원</h3></a>
+        </div>
+
+        <div class="col-4 center-text"><a href="views/jamsil.html">
+          <div class="each-work" style="height: 260px;">
+            <img src="./images/jamsil/jamsil1.jpg" alt="work image 1" style="height: 260px">
+            <div class="work-overlay"><br><br><br><br>
+              <p>자세히 보기</p>
+            </div>
+          </div>
+          <h3>잠실</h3></a>
+        </div>
+
+        <div class="col-4 center-text"><a href="views/myeongdong.html">
+          <div class="each-work right" style="height: 260px;">
+            <img src="./images/myeongdong/myeongdong1.jpg" alt="work image 1" style="height: 260px">
+            <div class="work-overlay"><br><br><br><br>
+              <p>자세히 보기</p>
+            </div>
+          </div>
+          <h3>명동</h3></a>
+        </div> 
+
+      </div>
+    </section>
+
+    <section>
+      <div class="row" style="height:350px; margin-top:100px">      
+        <div class="row">
+
+        <div class="col-2 center-text">
+          <div class = "col-2"></div>
+        </div>
+
+        <div class="col-8 center-text">
+      
+          <div class="swiper-container" >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide0"></div>
+              <div class="swiper-slide" id="slide1"></div>     
+              <div class="swiper-slide" id="slide2"></div>
+              <div class="swiper-slide" id="slide3"></div>
+              <div class="swiper-slide" id="slide4"></div>
+              <div class="swiper-slide" id="slide5"></div>
+              <div class="swiper-slide" id="slide6"></div>
+              <div class="swiper-slide" id="slide7"></div>
+              <div class="swiper-slide" id="slide8"></div>
+            </div>
+                         
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          mainevents('');
+        </script>
+        
+        <!-- Swiper JS -->
+        <script src="./js/swiper.min.js"></script>
+              
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper('.swiper-container', {
+            cssMode: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: false,
+            loopFillGroupWithBlank: true,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+              el: '.swiper-pagination'
+            },
+            mousewheel: true,
+            keyboard: true,
+          });
+        </script>
+        </div>
       </div>
 
     </section>
-    <section>
-      <div class="row">      
-            <div class="row">
-            <div class="col-4 center-text">
-              <a href="project.html">
-              <div class="each-work" style="height: 260px;">
-                <img src="./images/coex.jpg" alt="work image 1">
-                <div class="work-overlay">
-                  <br><br><br><br>
-                  <p>자세히 보기</p>
-                </div>         
-              </div>
-              <h3>코엑스</h3>
-            </a>
-            </div>
-
-              <div class="col-4 center-text">
-                <a href="project.html">  
-                <div class="each-work" style="height: 260px;">
-                  <img src="./images/art.jpg" alt="work image 1">
-                  <div class="work-overlay">
-                    <br><br><br><br>
-                    <p>자세히 보기</p>
-                  </div>
-                </div>
-                <h3>예술의 전당</h3>
-              </a>
-              </div>
-
-                <div class="col-4 center-text">
-                  <a href="project.html">
-                  <div class="each-work right" style="height: 260px;">
-                    <img src="./images/coex.jpg" alt="work image 1">
-                    <div class="work-overlay">
-                      <br><br><br><br>
-                      <p>자세히 보기</p>
-                    </div>
-                  </div>
-                  <h3>코엑스</h3>
-                </a>
-                </div> 
-
-              </div>
-
-    </section>
-    <section>
-      <div class="row" style="height:300px; margin-top:100px">      
-            <div class="row">
-            <div class="col-2 center-text">
-
-            </div>
-
-              <div class="col-8 center-text">
-                <div class="swiper-container">
-        
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./images/temp1.jpg" height="300px"></div>
-                    <div class="swiper-slide"><img src="./images/temp2.jpg" height="300px"></div>
-                    <div class="swiper-slide"><img src="./images/temp3.jpg" height="300px"></div>
-                    <div class="swiper-slide"><img src="./images/temp4.jpg" height="300px"></div>
-                    <div class="swiper-slide"><img src="./images/temp5.jpg" height="300px"></div>
-                    <div class="swiper-slide"><img src="./images/temp6.jpg" height="300px"></div>
-                  </div>
-                  <!-- Add Arrows -->
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
-                  <!-- Add Pagination -->
-                  <div class="swiper-pagination"></div>
-                
-                </div></div>
-          
-                <!-- Swiper JS -->
-                <script src="./js/swiper.min.js"></script>
-              
-                <!-- Initialize Swiper -->
-                <script>
-                  var swiper = new Swiper('.swiper-container', {
-                    cssMode: true,
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    slidesPerGroup: 3,
-                    loop: true,
-                    loopFillGroupWithBlank: true,
-                    navigation: {
-                      nextEl: '.swiper-button-next',
-                      prevEl: '.swiper-button-prev',
-                    },
-                    pagination: {
-                      el: '.swiper-pagination'
-                    },
-                    mousewheel: true,
-                    keyboard: true,
-                  });
-                </script>
-              </div>
-
-
-              </div>
-
-    </section>
- 
-    <hr>
-
 
     <!-- Footer -->
     <footer>

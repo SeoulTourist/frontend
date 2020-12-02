@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEOUL TRAVEL</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="../css/grid.css">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/search.css">
   
 </head>
 
@@ -17,35 +19,47 @@
   <div class="container">
 
     <!-- Header -->
-    <header class="row">
-      <div class="col-2"><a href="./main.html">
-        <img src="../images/ssss.png" alt="Logo Image" class="header-image">
-        </a>
-      </div>
-     
-      <div class="col-2"> <a href="../views/attraction.html">
-        <h3 class="name-title">지역</h3>
-        <h4 class="name-title">Area</h4></a>
-      </div>
-      <div class="col-2"><a href="../views/events.html">
-        <h3 class="name-title">문화 행사</h3>
-        <h4 class="name-title">Events</h4>
-      </a></div>
+    <header class="header" >
+      <nav class="row">
+        <div class="col-2"><a href="../main.html">
+          <img src="../images/ssss.png" alt="Logo Image" class="header-image">
+          </a>
+        </div>
 
-      <div class="col-2"><a href="../views/attraction.html">
-        <h3 class="name-title">관광지</h3>
-        <h4 class="name-title">Attraction</h4>
-      </a></div>
-      
-      <div class="col-2"><a href="../mypage.html">
-        <h3 class="name-title">마이페이지</h3>
-        <h4 class="name-title">Mypage</h4>
-      </a></div>
-      <div class="col-2"><a href="../login.html">
-        <h3 class="name-title">로그인</h3>
-        <h4 class="name-title">Login</h4>
-      </a></div>
+        <div class="col-2 dropdown">
+          <div class="dropbtn">
+            <h3 class="name-title">지역</h3>
+            <h4 class="name-title">Area</h4>
+          </div>
+          <div class="dropdown-content">
+            <a href="gangnam.html">강남</a>
+            <a href="hongdae.html">홍대</a>
+            <a href="gwanghwamun.html">광화문</a>
+            <a href="itaewon.html">이태원</a>
+            <a href="jamsil.html">잠실</a>
+            <a href="myeongdong.html">명동</a>
+            <a href="#">기타</a>
+          </div>
+        </div>
+        <div class="col-2"><a href="events.html">
+          <h3 class="name-title">문화 행사</h3>
+          <h4 class="name-title">Events</h4>
+        </a></div>
 
+        <div class="col-2"><a href="attraction.html">
+          <h3 class="name-title">관광지</h3>
+          <h4 class="name-title">Attraction</h4>
+        </a></div>
+        
+        <div class="col-2"><a href="mypage.html">
+          <h3 class="name-title">마이페이지</h3>
+          <h4 class="name-title">Mypage</h4>
+        </a></div>
+        <div class="col-2"><a href="../login.html">
+          <h3 class="name-title">로그인</h3>
+          <h4 class="name-title">Login</h4>
+        </a></div>
+      </nav>
     </header>
 
     <hr>
@@ -85,13 +99,14 @@
 
       <div class="row">
         <div class="col-8 center-text work">
-          <div class="each-work">
-
-            <img src="../images/jamsil/jamsil2.jpg" alt="place image 1" class="left">
-            <div class="work-overlay">
-              <h2>롯데월드타워</h2>
+          <a href="details.html?contentid=2003909">
+            <div class="each-work">
+              <img src="../images/jamsil/jamsil2.jpg" alt="place image 1" class="left">
+              <div class="work-overlay">
+                <h2>롯데월드타워</h2>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <div class="col-4 work">
@@ -101,7 +116,11 @@
             555m, 123층의 거대한 수직도시 롯데월드타워에는 국내 최고 높이 전망대인 서울스카이, 국내 최고 수준의 호텔 시그니엘서울, 프리미엄 헬스케어센터와 피트니스센터, 파이낸스센터가 입점한 포디엄이 위치하여 그 높이만큼 특별한 가치를 경험할 수 있습니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
       </div>
 
@@ -117,26 +136,34 @@
             잘 가꿔진 도심 속 쉼터라는 타이틀이 아깝지 않을 매력을 가지고 있는 석촌호수입니다.
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
         <div class="col-8 center-text work">
-          <div class="each-work">
-            <img src="../images/jamsil/jamsil3.jpg" alt="place image 2" class="right">
-            <div class="work-overlay">
-              <h2>석촌호수</h2>
+          <a href="details.html?contentid=754052">
+            <div class="each-work">
+              <img src="../images/jamsil/jamsil3.jpg" alt="place image 2" class="right">
+              <div class="work-overlay">
+                <h2>석촌호수</h2>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
       <div class="row">
         <div class="col-8 center-text">
-          <div class="each-work">
-            <img src="../images/jamsil/jamsil4.jpg" alt="place image 3" class="left">
-            <div class="work-overlay">
-              <h2>올림픽공원</h2>
+          <a href="details.html?contentid=558912">
+            <div class="each-work">
+              <img src="../images/jamsil/jamsil4.jpg" alt="place image 3" class="left">
+              <div class="work-overlay">
+                <h2>올림픽공원</h2>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <div class="col-4">
@@ -149,7 +176,11 @@
             올림픽공원은 볼거리도 많고 즐길거리도 많아 그저 욕심 없이 발길 닿는 대로 돌아보는 것도 추천합니다. 
           </p>
           <textarea class="review">리뷰를 남겨주세요.</textarea>
-			    <input type="submit" value="등록">
+          <input type="submit" value="등록">
+          
+          <div class="row">
+            <button class="button" display="block">LIKE</button> 
+          </div>
         </div>
       </div>
     </div>
@@ -163,14 +194,16 @@
       </div>
       <!-- Work 1 -->
       <section class="col-4 center-text work">
-        <div class="each-work">
-          <img src="../images/jamsil/jamsil5.jpg" alt="work image 1" class="left" >
-          <div class="work-overlay">
-            <h4>롯데월드 아이스링크는 <br>잠실 롯데월드 실내에 자리해 있고
-              <br>피겨스케이트, 스피드스케이트의 강습도 진행하고 있습니다.
-            </h4>
+        <a href="details.html?contentid=131297">
+          <div class="each-work">
+            <img src="../images/jamsil/jamsil5.jpg" alt="work image 1" class="left" >
+            <div class="work-overlay">
+              <h4>롯데월드 아이스링크는 <br>잠실 롯데월드 실내에 자리해 있고
+                <br>피겨스케이트, 스피드스케이트의 강습도 진행하고 있습니다.
+              </h4>
+            </div>
           </div>
-        </div>
+        </a>
 
         <div class="work-detail">
           <h3 class="work-title work-side">롯데월드 아이스링크</h3>
@@ -179,14 +212,16 @@
 
       <!-- Work 2 -->
       <section class="col-4 center-text work">
-        <div class="each-work">
-          <img src="../images/jamsil/jamsil6.png" alt="work image 2">
-          <div class="work-overlay">
-            <h4>롯데월드타워
-               가장 높은 곳에 위치한<br> 서울스카이 전망대<br>
-               서울을 360도 뷰를 통해 한눈에 담을 수 있는 곳입니다. </h4>
+        <a href="details.html?contentid=2492348">
+          <div class="each-work">
+            <img src="../images/jamsil/jamsil6.png" alt="work image 2">
+            <div class="work-overlay">
+              <h4>롯데월드타워
+                 가장 높은 곳에 위치한<br> 서울스카이 전망대<br>
+                 서울을 360도 뷰를 통해 한눈에 담을 수 있는 곳입니다. </h4>
+            </div>
           </div>
-        </div>
+        </a>
 
         <div class="work-detail">
           <h3 class="work-title">서울스카이</h3>
@@ -196,12 +231,14 @@
 
       <!-- Work 3 -->
       <section class="col-4 center-text work">
-        <div class="each-work">
-          <img src="../images/jamsil/jamsil7.jpg" alt="work image 3" class="right">
-          <div class="work-overlay">
-            <h4>서울 롯데월드 건물에<br> 위치한 테마파크입니다.</h4>
+        <a href="details.html?contentid=126498">
+          <div class="each-work">
+            <img src="../images/jamsil/jamsil7.jpg" alt="work image 3" class="right">
+            <div class="work-overlay">
+              <h4>서울 롯데월드 건물에<br> 위치한 테마파크입니다.</h4>
+            </div>
           </div>
-        </div>
+        </a>
 
         <div class="work-detail">
           <h3 class="work-title work-side">롯데월드 어드벤처</h3>
@@ -213,7 +250,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; ysu96@naver.com / 2020 Sanguk Yu</p>
+      <p>&copy; 숭실대학교 웹프로그래밍 9조</p>
     </footer>
 
   </div>

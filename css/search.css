@@ -215,12 +215,3 @@ area {
 .details-info2 {
     padding-bottom: 30px;
 }
-
-footer {
-    width: 100%;
-    height: auto;
-    padding: 10px 0px 10px 0px;
-    text-align: center;
-    background-color: #eee;
-    color: #666;
-}
